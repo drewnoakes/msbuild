@@ -152,7 +152,7 @@ namespace Microsoft.Build.ObjectModelRemoting
         }
     }
 
-    public struct XmlAttributeLink
+    public readonly struct XmlAttributeLink
     {
         public XmlAttributeLink(string localName, string value, string namespaceUri)
         {

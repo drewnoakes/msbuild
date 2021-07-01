@@ -61,7 +61,7 @@ namespace Microsoft.Build.BackEnd
         /// <summary>
         /// Used to return a matched pair of endpoints for in-proc nodes to use with the Build Manager.
         /// </summary>
-        internal struct EndpointPair
+        internal readonly struct EndpointPair
         {
             /// <summary>
             /// The endpoint destined for use by a node.

@@ -18,17 +18,17 @@ namespace Microsoft.Build.Shared
     /// <typeparam name="TKey">Key</typeparam>
     /// <typeparam name="TValue">Value</typeparam>
     [SuppressMessage("Microsoft.Performance", "CA1815:OverrideEqualsAndOperatorEqualsOnValueTypes", Justification = "Not possible as Equals cannot be implemented on the struct members")]
-    internal struct Pair<TKey, TValue>
+    internal readonly struct Pair<TKey, TValue>
     {
         /// <summary>
         /// Key
         /// </summary>
-        private TKey _key;
+        private readonly TKey _key;
 
         /// <summary>
         /// Value
         /// </summary>
-        private TValue _value;
+        private readonly TValue _value;
 
         /// <summary>
         /// Constructor

@@ -14,7 +14,7 @@ namespace Microsoft.Build.Evaluation
     /// imported project.
     /// </summary>
     [SuppressMessage("Microsoft.Performance", "CA1815:OverrideEqualsAndOperatorEqualsOnValueTypes", Justification = "Not possible as Equals cannot be implemented on the struct members")]
-    public struct ResolvedImport
+    public readonly struct ResolvedImport
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResolvedImport"/> struct.

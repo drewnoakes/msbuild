@@ -230,7 +230,7 @@ Build
             return new RedirectionScope(this);
         }
 
-        private struct RedirectionScope : IDisposable
+        private readonly struct RedirectionScope : IDisposable
         {
             private readonly BuildEventArgsWriter _writer;
 

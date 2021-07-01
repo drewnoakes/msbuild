@@ -887,7 +887,7 @@ namespace Microsoft.Build.UnitTests.Definition
                 afterEvaluationAction);
         }
 
-        private struct ProjectSpecification
+        private readonly struct ProjectSpecification
         {
             public string ProjectFilePath { get; }
             public string ProjectContents { get; }

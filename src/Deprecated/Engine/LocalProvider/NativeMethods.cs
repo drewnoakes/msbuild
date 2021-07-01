@@ -199,12 +199,12 @@ namespace Microsoft.Build.BuildEngine
         }
 
         [StructLayout(LayoutKind.Sequential)]
-        internal struct PROCESS_INFORMATION
+        internal readonly struct PROCESS_INFORMATION
         {
-            IntPtr hProcess;
-            IntPtr hThread;
-            int dwProcessId;
-            int dwThreadId;
+            readonly IntPtr hProcess;
+            readonly IntPtr hThread;
+            readonly int dwProcessId;
+            readonly int dwThreadId;
         }
 
         [StructLayout(LayoutKind.Sequential)]

@@ -726,7 +726,7 @@ namespace Microsoft.Build.Construction
         /// <summary>
         /// Enumerable over a series of sibling ProjectElement objects
         /// </summary>
-        private struct ProjectElementSiblingEnumerable : IEnumerable<ProjectElement>
+        private readonly struct ProjectElementSiblingEnumerable : IEnumerable<ProjectElement>
         {
             /// <summary>
             /// The enumerator

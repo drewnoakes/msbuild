@@ -1427,7 +1427,7 @@ namespace Microsoft.Build.BackEnd
         /// <summary>
         /// Struct used to contain information about requests submitted by the RequestBuilder.
         /// </summary>
-        private struct PendingUnsubmittedBuildRequests
+        private readonly struct PendingUnsubmittedBuildRequests
         {
             public BuildResult PartialBuildResult { get; }
 

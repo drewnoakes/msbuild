@@ -136,7 +136,7 @@ namespace Microsoft.Build.UnitTests.BackEnd
             #endregion
         }
 
-        private struct LinkStatusContext
+        private readonly struct LinkStatusContext
         {
             public readonly Thread thread;
             public readonly LinkStatus status;
@@ -148,7 +148,7 @@ namespace Microsoft.Build.UnitTests.BackEnd
             }
         }
 
-        private struct DataReceivedContext
+        private readonly struct DataReceivedContext
         {
             public readonly Thread thread;
             public readonly INodePacket packet;

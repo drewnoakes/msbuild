@@ -122,7 +122,7 @@ namespace Microsoft.Build.Evaluation
             }
         }
 
-        public struct ItemData
+        public readonly struct ItemData
         {
             public ItemData(I item, ProjectItemElement originatingItemElement, int elementOrder, bool conditionResult)
             {

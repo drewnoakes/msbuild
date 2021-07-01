@@ -14,12 +14,12 @@ namespace Microsoft.Build.Shared
     /// It works because although this is a value type, it is not defined in mscorlib.
     /// </comment>
     /// <typeparam name="T">Wrapped type</typeparam>
-    internal struct NGen<T> where T : struct
+    internal readonly struct NGen<T> where T : struct
     {
         /// <summary>
         /// Wrapped value
         /// </summary>
-        private T _value;
+        private readonly T _value;
 
         /// <summary>
         /// Constructor

@@ -477,17 +477,17 @@ After:
             /// <summary>
             /// Equatable key for the table
             /// </summary>
-            internal struct TargetTaskKey : IEquatable<TargetTaskKey>
+            internal readonly struct TargetTaskKey : IEquatable<TargetTaskKey>
             {
                 /// <summary>
                 /// Target name
                 /// </summary>
-                internal string _targetName;
+                internal readonly string _targetName;
 
                 /// <summary>
                 /// Task name
                 /// </summary>
-                internal string _taskName;
+                internal readonly string _taskName;
 
                 /// <summary>
                 /// Constructor

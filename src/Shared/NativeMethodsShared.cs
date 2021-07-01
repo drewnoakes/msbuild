@@ -320,14 +320,14 @@ namespace Microsoft.Build.Shared
         }
 
         [StructLayout(LayoutKind.Sequential)]
-        private struct PROCESS_BASIC_INFORMATION
+        private readonly struct PROCESS_BASIC_INFORMATION
         {
-            public uint ExitStatus;
-            public IntPtr PebBaseAddress;
-            public UIntPtr AffinityMask;
-            public int BasePriority;
-            public UIntPtr UniqueProcessId;
-            public UIntPtr InheritedFromUniqueProcessId;
+            public readonly uint ExitStatus;
+            public readonly IntPtr PebBaseAddress;
+            public readonly UIntPtr AffinityMask;
+            public readonly int BasePriority;
+            public readonly UIntPtr UniqueProcessId;
+            public readonly UIntPtr InheritedFromUniqueProcessId;
 
             public uint Size
             {

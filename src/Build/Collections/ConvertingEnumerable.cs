@@ -56,7 +56,7 @@ namespace Microsoft.Build.Collections
         /// </summary>
         /// <typeparam name="TFrom2">Type of underlying enumerator</typeparam>
         /// <typeparam name="TTo2">Type returned</typeparam>
-        private struct ConvertingEnumerator<TFrom2, TTo2> : IEnumerator<TTo2>
+        private readonly struct ConvertingEnumerator<TFrom2, TTo2> : IEnumerator<TTo2>
         {
             /// <summary>
             /// Enumerator behind this one

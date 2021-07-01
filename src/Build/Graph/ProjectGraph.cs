@@ -728,7 +728,7 @@ namespace Microsoft.Build.Graph
                 projectCollection);
         }
 
-        private struct ProjectGraphBuildRequest : IEquatable<ProjectGraphBuildRequest>
+        private readonly struct ProjectGraphBuildRequest : IEquatable<ProjectGraphBuildRequest>
         {
             public ProjectGraphBuildRequest(ProjectGraphNode node, ImmutableList<string> targets)
             {

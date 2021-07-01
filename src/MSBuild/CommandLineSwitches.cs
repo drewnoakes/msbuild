@@ -111,7 +111,7 @@ namespace Microsoft.Build.CommandLine
         /// This struct packages the information required to identify a switch that doesn't take any parameters. It is used when
         /// parsing the command line.
         /// </summary>
-        private struct ParameterlessSwitchInfo
+        private readonly struct ParameterlessSwitchInfo
         {
             /// <summary>
             /// Initializes struct data.
@@ -132,19 +132,19 @@ namespace Microsoft.Build.CommandLine
             }
 
             // names of the switch (without leading switch indicator)
-            internal string[] switchNames;
+            internal readonly string[] switchNames;
             // if null, indicates that switch is allowed to appear multiple times on the command line; otherwise, holds the error
             // message to display if switch appears more than once
-            internal string duplicateSwitchErrorMessage;
+            internal readonly string duplicateSwitchErrorMessage;
             // the switch id
-            internal ParameterlessSwitch parameterlessSwitch;
+            internal readonly ParameterlessSwitch parameterlessSwitch;
         }
 
         /// <summary>
         /// This struct packages the information required to identify a switch that takes parameters. It is used when parsing the
         /// command line.
         /// </summary>
-        private struct ParameterizedSwitchInfo
+        private readonly struct ParameterizedSwitchInfo
         {
             /// <summary>
             /// Initializes struct data.
@@ -176,23 +176,23 @@ namespace Microsoft.Build.CommandLine
             }
 
             // names of the switch (without leading switch indicator)
-            internal string[] switchNames;
+            internal readonly string[] switchNames;
             // if null, indicates that switch is allowed to appear multiple times on the command line; otherwise, holds the error
             // message to display if switch appears more than once
-            internal string duplicateSwitchErrorMessage;
+            internal readonly string duplicateSwitchErrorMessage;
             // indicates if switch can take multiple parameters (equivalent to switch appearing multiple times on command line)
             // NOTE: for most switches, if a switch is allowed to appear multiple times on the command line, then multiple
             // parameters can be provided per switch; however, some switches cannot take multiple parameters
-            internal bool multipleParametersAllowed;
+            internal readonly bool multipleParametersAllowed;
             // if null, indicates that switch is allowed to have no parameters; otherwise, holds the error message to show if
             // switch is found without parameters on the command line
-            internal string missingParametersErrorMessage;
+            internal readonly string missingParametersErrorMessage;
             // indicates if quotes should be removed from the switch parameters
-            internal bool unquoteParameters;
+            internal readonly bool unquoteParameters;
             // the switch id
-            internal ParameterizedSwitch parameterizedSwitch;
+            internal readonly ParameterizedSwitch parameterizedSwitch;
             // indicates if empty parameters are allowed and if so an empty string will be added to the list of parameter values
-            internal bool emptyParametersAllowed;
+            internal readonly bool emptyParametersAllowed;
         }
 
         // map switches that do not take parameters to their identifiers (taken from ParameterlessSwitch enum)

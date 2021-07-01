@@ -3151,7 +3151,7 @@ namespace Microsoft.Build.Tasks
         ///  Provide a class which has a key value pair for references and their assemblyNameExtensions.
         ///  This is used to prevent JIT'ing when using a generic list.
         /// </summary>
-        internal struct ReferenceAssemblyExtensionPair
+        internal readonly struct ReferenceAssemblyExtensionPair
         {
             internal ReferenceAssemblyExtensionPair(Reference key, AssemblyNameExtension value)
             {

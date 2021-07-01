@@ -9,7 +9,7 @@ namespace Microsoft.Build.Graph
     /// <summary>
     /// Represents an entry point into the project graph which is comprised of a project file and a set of global properties
     /// </summary>
-    public struct ProjectGraphEntryPoint
+    public readonly struct ProjectGraphEntryPoint
     {
         /// <summary>
         /// Constructs an entry point with the given project file and no global properties.

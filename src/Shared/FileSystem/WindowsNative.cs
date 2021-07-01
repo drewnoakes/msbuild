@@ -111,7 +111,7 @@ namespace Microsoft.Build.Shared.FileSystem
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
             "CA1815:OverrideEqualsAndOperatorEqualsOnValueTypes")]
-        public struct EnumerateDirectoryResult
+        public readonly struct EnumerateDirectoryResult
         {
             /// <summary>
             /// Enumerated directory.

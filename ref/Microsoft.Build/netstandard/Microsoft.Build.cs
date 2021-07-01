@@ -827,10 +827,10 @@ namespace Microsoft.Build.Evaluation
         public Microsoft.Build.Evaluation.Provenance Provenance { get { throw null; } }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public partial struct ResolvedImport
+    public readonly partial struct ResolvedImport
     {
-        private object _dummy;
-        private int _dummyPrimitive;
+        private readonly object _dummy;
+        private readonly int _dummyPrimitive;
         public Microsoft.Build.Construction.ProjectRootElement ImportedProject { get { throw null; } }
         public Microsoft.Build.Construction.ProjectImportElement ImportingElement { get { throw null; } }
         public bool IsImported { get { throw null; } }
@@ -1531,10 +1531,10 @@ namespace Microsoft.Build.Globbing
         public static Microsoft.Build.Globbing.MSBuildGlob Parse(string fileSpec) { throw null; }
         public static Microsoft.Build.Globbing.MSBuildGlob Parse(string globRoot, string fileSpec) { throw null; }
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-        public partial struct MatchInfoResult
+        public readonly partial struct MatchInfoResult
         {
-            private object _dummy;
-            private int _dummyPrimitive;
+            private readonly object _dummy;
+            private readonly int _dummyPrimitive;
             public string FilenamePartMatchGroup { get { throw null; } }
             public string FixedDirectoryPartMatchGroup { get { throw null; } }
             public bool IsMatch { get { throw null; } }
@@ -1653,9 +1653,9 @@ namespace Microsoft.Build.Graph
         public delegate Microsoft.Build.Execution.ProjectInstance ProjectInstanceFactoryFunc(string projectPath, System.Collections.Generic.Dictionary<string, string> globalProperties, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public partial struct ProjectGraphEntryPoint
+    public readonly partial struct ProjectGraphEntryPoint
     {
-        private object _dummy;
+        private readonly object _dummy;
         public ProjectGraphEntryPoint(string projectFile) { throw null; }
         public ProjectGraphEntryPoint(string projectFile, System.Collections.Generic.IDictionary<string, string> globalProperties) { throw null; }
         public System.Collections.Generic.IDictionary<string, string> GlobalProperties { get { throw null; } }
@@ -2146,9 +2146,9 @@ namespace Microsoft.Build.ObjectModelRemoting
         protected UsingTaskParameterGroupElementLink() { }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public partial struct XmlAttributeLink
+    public readonly partial struct XmlAttributeLink
     {
-        private object _dummy;
+        private readonly object _dummy;
         public XmlAttributeLink(string localName, string value, string namespaceUri) { throw null; }
         public string LocalName { get { throw null; } }
         public string NamespaceURI { get { throw null; } }

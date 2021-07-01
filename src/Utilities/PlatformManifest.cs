@@ -164,7 +164,7 @@ namespace Microsoft.Build.Utilities
         /// <summary>
         /// Represents a dependency on another platform
         /// </summary>
-        internal struct DependentPlatform
+        internal readonly struct DependentPlatform
         {
             /// <summary>
             /// Name of the platform on which this platform depends

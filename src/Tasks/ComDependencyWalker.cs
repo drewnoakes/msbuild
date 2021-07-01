@@ -48,7 +48,7 @@ namespace Microsoft.Build.Tasks
             }
         }
 
-        private struct AnalyzedTypesInfoKey
+        private readonly struct AnalyzedTypesInfoKey
         {
             public readonly Guid guid;
             public readonly short wMajorVerNum;

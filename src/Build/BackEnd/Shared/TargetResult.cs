@@ -360,7 +360,7 @@ namespace Microsoft.Build.Execution
         /// <summary>
         /// Information about where the cache for the items in this result are stored.
         /// </summary>
-        private struct CacheInfo
+        private readonly struct CacheInfo
         {
             /// <summary>
             /// Constructor.
